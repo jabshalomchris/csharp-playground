@@ -1,2 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+using Calendars;
+
+Date birthDate = new Date(2016, 2, 29);
+Child schoolChild = new Child("Sam", birthDate);
