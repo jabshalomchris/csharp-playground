@@ -8,9 +8,11 @@ namespace csharp_playground.Polymorphism
 {
     public class DerivedClass : ParentClass
     {
-        public new void DoWork()
+        private string MyVariable = "Derived Class Variable";
+
+        public override  void DoWork()
         {
-            Console.WriteLine("Invoked from Derived");
+            Console.WriteLine(MyVariable);
         }
     }
 }

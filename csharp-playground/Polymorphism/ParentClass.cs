@@ -8,9 +8,11 @@ namespace csharp_playground.Polymorphism
 {
     public class ParentClass
     {
-        public void DoWork()
+        private string MyVariable = "Parent Class Variable";
+
+        public virtual void DoWork()
         {
-            Console.WriteLine("Invoked from parent");
+            Console.WriteLine(MyVariable);
         }
     }
 }

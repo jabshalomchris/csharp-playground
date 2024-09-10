@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using csharp_playground.Polymorphism;
+
+
+// Object substitution class
+ParentClass cl = new DerivedClass();
+cl.DoWork();
