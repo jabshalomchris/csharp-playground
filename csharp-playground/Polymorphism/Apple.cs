@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace csharp_playground.Polymorphism
 {
-    public class ParentClass
+    public class Apple : IFruit
     {
-        private string MyVariable = "Parent Class Variable";
-
-        public virtual void DoWork()
+        public string GetColour()
         {
-            Console.WriteLine(MyVariable);
+            return "RED";
         }
     }
 }
