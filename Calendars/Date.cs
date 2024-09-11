@@ -18,5 +18,10 @@ namespace Calendars
             _month = month;
             _day = day;
         }
+
+        public override string ToString()
+        {
+            return _month + "/" + _day + "/" + _year;
+        }
     }
 }
