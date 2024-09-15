@@ -18,5 +18,12 @@ namespace Calendars
             _minAge = minAge;
             _schoolStart = schoolStart;
         }
+
+        public Date GetSchoolBeginningForChild(Child schoolChild) 
+        {
+            Date oldEnough = schoolChild.GetDateByAge(_minAge);
+            Date cutoff = schoolChild.GetDateByAge(_minAge);
+            return oldEnough;
+        }
     }
 }

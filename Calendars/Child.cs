@@ -17,9 +17,10 @@ namespace Calendars
             _birthDate = birthDate;
         }
 
-        public override string ToString()
-        {
-            return _name + " born on " + _birthDate;
-        }
+        public override string ToString() => 
+            _name + " born on " + _birthDate;
+
+        public Date GetDateByAge(int minAge) => 
+            throw new NotImplementedException();
     }
 }
