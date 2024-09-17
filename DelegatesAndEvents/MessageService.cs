@@ -1,8 +1,10 @@
-﻿public class MessageService
+﻿using DelegatesAndEvents;
+
+public class MessageService
 {
-    public void OnVideoEncoded(object source, EventArgs e)
+    public void OnVideoEncoded(object source, VideoEventArgs args)
     {
-        Console.WriteLine("Message Service: Sending message....");
+        Console.WriteLine($"Message Service: Sending message.... {args.Video.Title}");
     }
 
 }

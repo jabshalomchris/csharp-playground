@@ -7,14 +7,10 @@ using System.Threading.Tasks;
 
 namespace DelegatesAndEvents
 {
-    internal class VideoEncoder
+
+    public class VideoEncoder
     {
-
-        //Define a delegate
-        //Define an event
-        // Raise the event
-
-        public delegate void VideoEncodedEventHandler(object source, EventArgs args);
+        public delegate void VideoEncodedEventHandler(object source, VideoEventArgs args);
 
         public event VideoEncodedEventHandler VideoEncoded;
 
@@ -23,14 +19,14 @@ namespace DelegatesAndEvents
             Console.WriteLine("Encoding video..");
             Thread.Sleep(3000);
 
-            OnVideoEncoded();
+            OnVideoEncoded(video);
         }
 
-        protected virtual void OnVideoEncoded()
+        protected virtual void OnVideoEncoded(Video video)
         {
             if (VideoEncoded != null)
             {
-                VideoEncoded(this, EventArgs.Empty);
+                VideoEncoded(this, new VideoEventArgs() { Video = video});
             }
         }
     }
