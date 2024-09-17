@@ -10,9 +10,12 @@ namespace DelegatesAndEvents
 
     public class VideoEncoder
     {
-        public delegate void VideoEncodedEventHandler(object source, VideoEventArgs args);
+        //Declaring Delegate and event is now obselete
+        //public delegate void VideoEncodedEventHandler(object source, VideoEventArgs args);
 
-        public event VideoEncodedEventHandler VideoEncoded;
+        //public event VideoEncodedEventHandler VideoEncoded;
+
+        public event EventHandler<VideoEventArgs> VideoEncoded;
 
         public void Encode(Video video)
         {
