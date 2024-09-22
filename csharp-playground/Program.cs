@@ -36,3 +36,9 @@ var numAsc = listOfNumbers.OrderBy(x => x).ToList();
 var numDesc = listOfNumbers.OrderByDescending(x => x).ToList();
 
 var first = listOfNumbers.First();
+
+// Zip
+var numbers = new List<int>() { 1, 2, 3 };
+var letters = new List<char>() { 'a', 'b', 'c' };
+
+var result = numbers.Zip(letters, (num,letter) => $"{num}-{letter}");
